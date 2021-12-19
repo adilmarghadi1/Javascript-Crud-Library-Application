@@ -8,28 +8,34 @@
 
   </head>
   <body>
+
+      <section id='noprint'>
     <main class='container'>
         <form onsubmit="event.preventDefault();onFormSubmit()">
         <div class="input1">
         <label id="first">Titre
+            <br>
          <input type='text' name='titre' id='titre' placeholder='titre' required maxlength="30" />
         </label>
         <div it='titre1'></div>
         <br><br>
         <label>Auteur 
+            <br>
         <input type='text' name='auteur' id='auteur' placeholder='auteur' required maxlength="30"/>
         </label>
         <br><br>
         <label>Email 
+            <br>
         <input type='text' name='email' id='email' placeholder='email' required />
         </label>
      <br><br>
         <label>Prix
+            <br>
       <input type='phone' name='Prix' id='prix' placeholder='Prix' required />
         </label>
         <br><br>
         <label>date de publication
-         
+         <br>
     <input type="date" name="date" id='date' required>
           </div>
          <br><br>
@@ -44,13 +50,13 @@
            <br/><br>
             <div id="input2">
               <input type='radio' id='roman' value='Roman'  name='fav'>
-            <label for='roman'>Roman</label>
+             Roman 
             
             <input type='radio' id='essai' value='Essai'   name='fav'>
-            <label for='essai'>Essai</label>
+             Essai 
             
             <input type='radio' id='bandle' value='bandle'   name='fav'>
-            <label for='bandle'>Bande-Dessinée</label>
+            Bande-Dessinée 
             </div>
            
              
@@ -79,7 +85,13 @@
                 </table>
           </div>
             <br>
+        </section>
             <h4 id="data101"></h4>
+            <br/><br>
+            <h4 id='lo'></h4>
+            <div id='btn1'>
+            <button id='btn'>Print</button>
+            </div>
         <script src="script.js">
 
             

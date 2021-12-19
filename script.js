@@ -8,27 +8,24 @@ function onFormSubmit() {
             insertNewRecord(formData)
             sortTable()
 
-            // localStorage.setItem('data101', JSON.stringify(formData));
-            // let storageProfileString = localStorage.getItem("data101");
-            // console.log("String saved in LocalStorage", storageProfileString);
-            // let savedPerson = JSON.parse(storageProfileString);
-            // console.log("Person object:", savedPerson);
-            // console.log("Person's name:", savedPerson.titre);
-
-
-        }
+       
  
 
-               
+
+    
+        }
+ 
+                
         else{
             updateRecord(formData);
-
-            localStorage.setItem('data101', JSON.stringify(formData)); 
+   
+             localStorage.setItem('data101', JSON.stringify(formData)); 
             let storageProfileString = localStorage.getItem("data101");
             console.log("String saved in LocalStorage", storageProfileString);
             let savedPerson = JSON.parse(storageProfileString);
             console.log("Person object:", savedPerson);
             console.log("Person's name:", savedPerson.titre);
+      
         }
 
         resetForm();
@@ -40,10 +37,8 @@ const auteur = document.getElementById('auteur')
 const prix = document.getElementById('prix')
 const email = document.getElementById('email')
 
-
-
  
-
+ 
 
 //  formData.sort((a,b) => { return a.formData["prix"] - b.formData["prix"]})
 
@@ -214,10 +209,6 @@ function insertNewRecord(data) {
     var table = document.getElementById("list").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.length);
 
-
- 
-   
-    
         
 
     cell1 = newRow.insertCell(0);
@@ -241,17 +232,34 @@ function insertNewRecord(data) {
                         
      
      
-           
+ 
+ 
 
-
-           
+ 
+    var a;
+    //is anything in localstorage?
+    if (localStorage.getItem('formData') === null) {
+        a = [];
+    } else {
+         a = JSON.parse(localStorage.getItem('formData'));
+     }
+     let col = document.getElementById('lo')
+     a.push(data)
+      
+     // Re-serialize the array back into a string and store it in localStorage
+      localStorage.setItem('formData', JSON.stringify(a));
+   
+      
+      col.innerHTML = localStorage.getItem('formData')
+ 
+     
  
              
         }
 
 
  
-
+ 
  
  
 function resetForm() {
@@ -275,6 +283,27 @@ function onEdit(td) {
     document.getElementById("langue").value = selectedRow.cells[4].innerHTML;
     document.getElementById("input2").value = selectedRow.cells[5].innerHTML;
     document.getElementById("date").value = selectedRow.cells[6].innerHTML;
+
+ 
+    //       var a;
+    // //is anything in localstorage?
+    // if (localStorage.getItem('formData') === null) {
+    //     a = [];
+    // } else {
+    //      // Parse the serialized data back into an array of objects
+    //      a = JSON.parse(localStorage.getItem('formData'));
+    //  }
+    //  // Push the new data (whether it be an object or anything else) onto the array
+    //  let col = document.getElementById('lo')
+    //  a.push(data)
+      
+    //  // Alert the array value
+    //  // Re-serialize the array back into a string and store it in localStorage
+    //   localStorage.setItem('formData', JSON.stringify(a));
+   
+      
+    //   col.innerHTML = localStorage.getItem('formData')
+      
 }
 function updateRecord(formData) {
     selectedRow.cells[0].innerHTML = formData.titre;
@@ -295,6 +324,10 @@ function onDelete(td) {
 }
 
   
+let btn = document.getElementById('btn')
+btn.addEventListener('click', function() {
+    window.print(), id='="noPrint"'
+})
 
 
 let submit1 = document.getElementById('submit1')

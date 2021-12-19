@@ -15,14 +15,21 @@
     padding-top:30px;
   }
   
+
+  #input2 {
+      margin-left: 10%;
+  }
   label {
     line-height:1.2;
+    margin-left: 10%;
     font-size:22px;
     color:#22223b
   }
   .input1 input {
   margin-top:15px;
-    width:100%;
+  margin-left: 10%;
+    width:90%;
+    display: block;
     font-size:18px;
     background-color:#cb997e;
     border:none;
@@ -60,14 +67,17 @@
   
   
   body > table{
-      width: 80%;
+      width: 90%;
+       
   }
   
   table{
       border-collapse: collapse;
+      margin-left: 10%;
   }
   table.list{
       width:100%;
+      margin-left: 10%;
   }
   
   td, th {
@@ -84,3 +94,34 @@
       text-align: center;
   }
 
+
+
+#btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn {
+    padding:12px 30px;
+    background-color: rgb(236, 190, 103);
+    color: white;
+    border: none;
+    border-radius: 13px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: orangered;
+    transition: all 0.4s ease-in;
+}
+
+
+
+@media print {
+    #noprint {
+        display: none;
+    }
+}
