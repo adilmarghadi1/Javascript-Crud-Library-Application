@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='UTF-8'>
+    <link rel="stylesheet" href="style.css">
+    <title>Javascript Library</title>
+    <link rel="shortcut icon" href="#">
+
+  </head>
+  <body>
+    <main class='container'>
+        <form onsubmit="event.preventDefault();onFormSubmit()">
+        <div class="input1">
+        <label id="first">Titre
+         <input type='text' name='titre' id='titre' placeholder='titre' required maxlength="30" />
+        </label>
+        <div it='titre1'></div>
+        <br><br>
+        <label>Auteur 
+        <input type='text' name='auteur' id='auteur' placeholder='auteur' required maxlength="30"/>
+        </label>
+        <br><br>
+        <label>Email 
+        <input type='text' name='email' id='email' placeholder='email' required />
+        </label>
+     <br><br>
+        <label>Prix
+      <input type='phone' name='Prix' id='prix' placeholder='Prix' required />
+        </label>
+        <br><br>
+        <label>date de publication
+         
+    <input type="date" name="date" id='date' required>
+          </div>
+         <br><br>
+          <label>
+            <select name='langue' id='langue' required> 
+               <option value='anglais' required id='anglais'>Anglais</option>
+              <option value='Francais' required id='francais'>Francais</option>
+              <option value='Arabe' required id='arabe'>Arabe</option>
+            
+              
+        </label></select>
+           <br/><br>
+            <div id="input2">
+              <input type='radio' id='roman' value='Roman'  name='fav'>
+            <label for='roman'>Roman</label>
+            
+            <input type='radio' id='essai' value='Essai'   name='fav'>
+            <label for='essai'>Essai</label>
+            
+            <input type='radio' id='bandle' value='bandle'   name='fav'>
+            <label for='bandle'>Bande-Dessinée</label>
+            </div>
+           
+             
+      
+          
+          <div class="buttons">
+            <button id="submit1">Submit</button> 
+          </div></form>
+          <br><br><br>
+          
+                <table class="table" id="list">
+            <thead>
+                        <tr>
+                            <th>Titre</th>
+                            <th>Auteur</th>
+                            <th>Email</th>
+                            <th>Prix</th>
+                            <th>Langue</th>
+                            <th>List</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+          </div>
+            <br>
+            <h4 id="data101"></h4>
+        <script src="script.js">
+
+            
+        </script>
+        </body>
+      
+      </html>
